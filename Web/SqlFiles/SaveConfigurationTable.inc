@@ -1,6 +1,0 @@
-﻿UPDATE CONFIG_TABLE
-SET PARAMETERNAME = @ParameterName,
-	TYPEV = @Type,
-	VALUE = @Value,
-	ADDITIONAL_VALUE = @AdditionalValue
-WHERE CONFIGID = @ConfigId

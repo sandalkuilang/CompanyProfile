@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -25,6 +26,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -300,47 +302,8 @@
     <Content Include="Scripts\soon\move-top.js" />
     <Content Include="Scripts\soon\wow.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="SqlFiles\AddMenuMaster.inc" />
-    <Content Include="SqlFiles\AddRoleMaster.inc" />
-    <Content Include="SqlFiles\AddRoleMenu.inc" />
-    <Content Include="SqlFiles\AddUser.inc" />
-    <Content Include="SqlFiles\AddUserManual.inc" />
-    <Content Include="SqlFiles\DeleteBackup.inc" />
-    <Content Include="SqlFiles\DeleteConfigurationTable.inc" />
-    <Content Include="SqlFiles\DeleteFeatureMaster.inc" />
-    <Content Include="SqlFiles\DeleteMenuMaster.inc" />
-    <Content Include="SqlFiles\DeleteRoleMaster.inc" />
-    <Content Include="SqlFiles\DeleteRoleMenu.inc" />
-    <Content Include="SqlFiles\DeleteUserProfile.inc" />
-    <Content Include="SqlFiles\GetAssignedBackup.inc" />
-    <Content Include="SqlFiles\GetConfigTableParameterName.inc" />
-    <Content Include="SqlFiles\GetConfigurationTable.inc" />
     <Content Include="SqlFiles\GetContent.inc" />
-    <Content Include="SqlFiles\GetFeatureMaster.inc" />
-    <Content Include="SqlFiles\GetImpersonateUser.inc" />
-    <Content Include="SqlFiles\GetListApplication.inc" />
-    <Content Include="SqlFiles\GetMenuDescription.inc" />
-    <Content Include="SqlFiles\GetMenuMaster.inc" />
-    <Content Include="SqlFiles\GetMenuName.inc" />
-    <Content Include="SqlFiles\GetNetworkID.inc" />
-    <Content Include="SqlFiles\GetParameter.inc" />
-    <Content Include="SqlFiles\GetParameterName.inc" />
-    <Content Include="SqlFiles\GetRoleMaster.inc" />
-    <Content Include="SqlFiles\GetRoleMenu.inc" />
-    <Content Include="SqlFiles\GetRoleOption.inc" />
-    <Content Include="SqlFiles\GetUserAlreadyBackup.inc" />
-    <Content Include="SqlFiles\GetUserCAI.inc" />
-    <Content Include="SqlFiles\GetUserInformationBackup.inc" />
-    <Content Include="SqlFiles\GetUserNameExcept.inc" />
-    <Content Include="SqlFiles\GetUserNameForBackup.inc" />
-    <Content Include="SqlFiles\GetUserNameOption.inc" />
-    <Content Include="SqlFiles\GetUserProfile.inc" />
     <Content Include="SqlFiles\GetYesNo.inc" />
-    <Content Include="SqlFiles\SaveConfigurationTable.inc" />
-    <Content Include="SqlFiles\SaveFeatureMaster.inc" />
-    <Content Include="SqlFiles\SaveMenuMaster.inc" />
-    <Content Include="SqlFiles\SaveUserProfile.inc" />
-    <Content Include="SqlFiles\SetBackup.inc" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -370,11 +333,15 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">

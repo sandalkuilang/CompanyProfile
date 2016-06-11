@@ -1,4 +1,0 @@
-﻿UPDATE FEATURE
-SET [KEY] = @Key,
-	QUALIFIER = @Qualifier
-WHERE ID = @Id
