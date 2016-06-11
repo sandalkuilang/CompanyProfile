@@ -1,3 +1,0 @@
-﻿DELETE FROM Role
-WHERE ID = @Id
-	AND APPLICATION = @Application

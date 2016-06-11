@@ -7,6 +7,6 @@ namespace Krokot.Web.Models
 {
     public class DatabaseNames
     {
-        public const string DefaultDB = "WebTemplate";
+        public const string DefaultDB = "CPA";
     }
 }
